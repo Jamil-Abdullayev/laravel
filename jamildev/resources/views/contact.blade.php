@@ -9,8 +9,33 @@
         Assumenda consectetur porro quam quia quod? Aperiam aut culpa dolores id itaque, molestias necessitatibus nis
         i officiis omnis perspiciatis quis repellendus, sequi voluptate?
         , molestias necessitatibus nisi officiis omnis perspiciatis quis repellendus, sequi voluptate?</p>
-@endsection
 
+    <form action="{{route('contact-form')}}" method="POST">
+        @csrf
+        <div class="form-group">
+            <label for="name">Name: </label>
+            <input type="text" name="name" value="" placeholder="enter name" id="name" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label for="name">Email: </label>
+            <input type="text" name="email" value="" placeholder="enter email" id="email" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label for="name">Subject: </label>
+            <input type="text" name="subject" value="" placeholder="enter subject" id="subject" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label for="name">Message: </label>
+            <textarea class="form-control" placeholder="Enter your Message" name="message" id="message" cols="20" rows="10"></textarea>
+         </div>
+
+        <button type="submit" class="btn btn-success">Send</button>
+    </form>
+@endsection
+<br>
 @section('dop_content')
     <div class="jumbotron" style="background: grey">
         <div class="container">
